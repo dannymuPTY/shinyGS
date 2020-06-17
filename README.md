@@ -22,5 +22,5 @@ https://scholar.google.com/citations?view_op=view_org&hl=es&org=4736061867397421
 - Paso 2: Ejecutar función PubGS_library() para cargar paquetes necesario
 - Paso 3: Lanzar aplicación con archivo app.R
 
-Los datos generados se puedn descargarn en formato .CSV
+Los datos generados se pueden descargar en formato .CSV  <br>
 Las imágenes se deben guardar en formato .png
