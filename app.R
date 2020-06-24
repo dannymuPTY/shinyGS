@@ -123,14 +123,14 @@ server <- function(input, output){
       #scraper$publicaciones <- PubGS_perfil(input$caption)
       #scraper$publicaciones <- PubGS_research(input$caption)
    
-      
+      #llamada de las funciones de extracción de datos perfil individual / perfil institucional
       scraper$publicaciones <- switch(input$escanear, 
           individual =  PubGS_perfil(input$caption), 
           institucional = {listaPerfil <- PubGS_research(input$caption)
                                           PubGS_hindex(listaPerfil)},
           institucionalFull = {listaPerfil <- PubGS_research(input$caption)
-                               listaNum <- PubGS_hindex(listaPerfil)
-                               PubGS_publications(listaNum)}
+                               scraper$listaNum <- PubGS_hindex(listaPerfil)
+                               PubGS_publications(scraper$listaNum)}
           )
       
     #})
